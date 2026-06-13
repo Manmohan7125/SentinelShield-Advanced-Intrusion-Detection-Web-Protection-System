@@ -1,0 +1,7 @@
+Flask
+Flask-SQLAlchemy
+Flask-Limiter
+Flask-Login
+Werkzeug
+pandas
+plotly

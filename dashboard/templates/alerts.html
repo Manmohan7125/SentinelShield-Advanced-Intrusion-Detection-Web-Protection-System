@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Alerts</title>
+
+</head>
+
+<body>
+
+<h1>Blocked Attacks</h1>
+
+<hr>
+
+
+{% for a in alerts %}
+
+<p>
+
+IP :
+
+{{ a.ip_address }}
+
+</p>
+
+<p>
+
+Attack :
+
+{{ a.attack_type }}
+
+</p>
+
+<p>
+
+Payload :
+
+{{ a.payload }}
+
+</p>
+
+<p>
+
+Time :
+
+{{ a.timestamp }}
+
+</p>
+
+<hr>
+
+{% endfor %}
+
+</body>
+
+</html>
