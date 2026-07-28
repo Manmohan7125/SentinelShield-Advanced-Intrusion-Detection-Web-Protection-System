@@ -1,240 +1,249 @@
-Sentinel Shield Enterprise
+# 🛡️ SentinelShield
+### AI-Powered Intrusion Detection & Web Protection System
 
-Web Security Monitoring and Intrusion Detection System
-
----
-
-1. Project Overview
-
-Sentinel Shield Enterprise is a Python and Flask based Web Security Monitoring and Intrusion Detection System (IDS). The system monitors incoming HTTP requests, detects suspicious activities, logs security events, and displays alerts through a web dashboard.
-
-The project is designed to demonstrate how modern web applications can monitor and detect common web attacks in real time.
+![Python](https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge&logo=python)
+![Flask](https://img.shields.io/badge/Flask-Web%20Framework-black?style=for-the-badge&logo=flask)
+![Cybersecurity](https://img.shields.io/badge/Cyber-Security-red?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-success?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge)
 
 ---
 
-2. Objective
+# 📌 Overview
 
-The main objectives of this project are:
+**SentinelShield** is an AI-powered Intrusion Detection and Web Protection System developed to detect, analyze, and respond to cyber threats in real time.
 
-- Monitor incoming HTTP requests.
-- Detect malicious payloads and suspicious requests.
-- Identify common web attacks.
-- Log all security events into a database.
-- Display alerts and logs through a web dashboard.
-- Provide real-time security monitoring.
+The system continuously monitors network traffic, identifies suspicious activities using intelligent detection mechanisms, logs security events, and provides an interactive dashboard for security monitoring.
+
+Designed with modern cybersecurity practices, SentinelShield demonstrates practical implementation of network security, intrusion detection, attack monitoring, and web application protection.
 
 ---
 
-3. Features
+# ✨ Key Features
 
-Real Time Request Monitoring
+✅ Real-Time Intrusion Detection
 
-Every incoming request is inspected before processing.
+✅ Intelligent Threat Analysis
 
-SQL Injection Detection
+✅ Network Packet Monitoring
 
-Detects SQL Injection attack patterns such as:
+✅ Web Application Protection
 
-- OR 1=1
-- UNION SELECT
-- DROP TABLE
-- INSERT INTO
-- DELETE FROM
+✅ Live Security Dashboard
 
-Cross Site Scripting (XSS) Detection
+✅ Event Logging & Monitoring
 
-Detects malicious JavaScript payloads such as:
+✅ Suspicious Traffic Detection
 
-- "<script>"
-- "alert()"
-- "onload="
-- "onerror="
+✅ IP Monitoring
 
-Path Traversal Detection
+✅ Security Alerts
 
-Detects unauthorized file access attempts such as:
+✅ Attack Detection Engine
 
-- ../
-- ..\
-- /etc/passwd
-- boot.ini
+✅ Modular Architecture
 
-Command Injection Detection
-
-Detects suspicious shell commands and operators:
-
-- ;
-- &&
-- ||
-- |
-- wget
-- curl
-
-Security Logs
-
-Stores:
-
-- IP Address
-- Attack Type
-- Payload
-- Timestamp
-- Action Taken
-
-Alerts Dashboard
-
-Displays:
-
-- Total Requests
-- Allowed Requests
-- Blocked Requests
-- Attack History
-- Recent Alerts
+✅ Easy Configuration
 
 ---
 
-4. Technology Stack
+# 🏗️ System Architecture
 
-Technology| Purpose
-Python| Backend Programming
-Flask| Web Framework
-SQLite| Database
-SQLAlchemy| ORM
-HTML| User Interface
-Regex| Attack Pattern Matching
-
----
-
-5. Project Structure
-
-Sentinel Shield Enterprise
-
-app.py
-config.py
-
-database/
-    db.py
-    models.py
-
-detectors/
-    sqli_detector.py
-    xss_detector.py
-    path_traversal_detector.py
-    command_injection_detector.py
-
-middleware/
-    request_inspector.py
-    rate_limiter.py
-
-logging_system/
-    logger.py
-    alert_manager.py
-
-dashboard/
-    routes.py
-
-    templates/
-
-        dashboard.html
-
-        logs.html
-
-        alerts.html
-
-data/
-
-    security.db
-
-README.md
-
-requirements.txt
+```text
+                 Internet
+                     │
+                     ▼
+          Network Traffic Capture
+                     │
+                     ▼
+         Intrusion Detection Engine
+                     │
+     ┌───────────────┼───────────────┐
+     ▼               ▼               ▼
+ Threat Analysis   Log System   Alert System
+     │               │               │
+     └───────────────┼───────────────┘
+                     ▼
+            Security Dashboard
+                     │
+                     ▼
+              Administrator
+```
 
 ---
 
-6. Installation
+# 🛠 Technologies Used
 
-Install all dependencies:
+| Technology | Purpose |
+|------------|----------|
+| Python | Core Development |
+| Flask | Web Framework |
+| Scapy | Packet Analysis |
+| HTML5 | Frontend |
+| CSS3 | UI Design |
+| JavaScript | Interactive Dashboard |
+| SQLite | Database |
+| Machine Learning | Threat Detection |
 
+---
+
+# 📂 Project Structure
+
+```text
+SentinelShield/
+
+├── dashboard/
+├── database/
+├── detectors/
+├── logging/
+├── middleware/
+├── static/
+├── templates/
+├── app.py
+├── config.py
+├── requirements.txt
+├── README.md
+├── LICENSE
+└── .gitignore
+```
+
+---
+
+# ⚙️ Installation
+
+## Clone Repository
+
+```bash
+git clone https://github.com/Manmohan7125/SentinelShield.git
+```
+
+## Move to Project
+
+```bash
+cd SentinelShield
+```
+
+## Install Dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
----
+## Run Application
 
-7. Run Project
-
-Start the application:
-
+```bash
 python app.py
-
-Application runs on:
-
-http://127.0.0.1:5000
+```
 
 ---
 
-8. Dashboard URLs
+# 🚀 Usage
 
-Home
-
-http://127.0.0.1:5000
-
-Dashboard
-
-http://127.0.0.1:5000/dashboard
-
-Security Logs
-
-http://127.0.0.1:5000/logs
-
-Alerts
-
-http://127.0.0.1:5000/alerts
+1. Start the application.
+2. Open the dashboard.
+3. Monitor network traffic.
+4. Detect suspicious activities.
+5. View generated alerts.
+6. Analyze logs.
+7. Improve system security.
 
 ---
 
-9. Test Cases
+# 🔒 Security Modules
 
-XSS Attack Test
-
-http://127.0.0.1:5000/?q=<script>alert(1)</script>
-
-Expected Result:
-
-- Attack detected
-- Logged in database
-- Displayed in Alerts page
+- Intrusion Detection
+- Threat Monitoring
+- Packet Inspection
+- Traffic Analysis
+- Log Management
+- Alert Generation
+- Dashboard Monitoring
 
 ---
 
-Path Traversal Test
+# 📊 Screenshots
 
-http://127.0.0.1:5000/?file=../../etc/passwd
+## Dashboard
 
-Expected Result:
-
-- Path Traversal detected
-- Alert generated
-- Stored in Logs page
+> Add Screenshot Here
 
 ---
 
-10. Future Enhancements
+## Threat Detection
 
-Future versions of the project may include:
+> Add Screenshot Here
 
-- Machine Learning based threat detection
-- IP Reputation Checking
-- Geo-location Tracking
-- Email Alerts
-- JWT Authentication
-- Role Based Access Control
+---
+
+## Alerts
+
+> Add Screenshot Here
+
+---
+
+## Logs
+
+> Add Screenshot Here
+
+---
+
+# 📈 Future Enhancements
+
+- AI-based Threat Intelligence
+- Malware Detection
+- PCAP File Export
+- Email Notifications
 - Docker Deployment
-- Cloud Deployment
-- Real Time Charts
-- Bootstrap Dashboard UI
+- Cloud Monitoring
+- Multi-user Authentication
+- SIEM Integration
+- Role-Based Access Control
+- REST API Support
 
 ---
 
-11. Conclusion
+# 🤝 Contributing
 
-Sentinel Shield Enterprise is a Web Security Monitoring and Intrusion Detection System that monitors incoming requests and detects suspicious activities. The system identifies common web attacks such as SQL Injection, Cross Site Scripting (XSS), Path Traversal, and Command Injection.
+Contributions are welcome.
 
-The project demonstrates how security monitoring, attack detection, logging, and alerting can be integrated into a web application to improve overall security and provide real-time visibility of malicious activities.
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push your branch
+5. Create a Pull Request
+
+---
+
+# 📜 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+# 👨‍💻 Author
+
+## Man Mohan Beniwal
+
+Cyber Security Enthusiast | Network Security | SOC | Ethical Hacking
+
+📧 Email:
+**manmohanbeniwal08@gmail.com**
+
+💼 LinkedIn:
+**https://www.linkedin.com/in/man-mohan-beniwal-3b9ab4259
+
+🐙 GitHub:
+**https://github.com/Manmohan7125
+
+---
+
+# ⭐ Support
+
+If you found this project helpful, please consider giving it a **Star ⭐** on GitHub.
+
+It helps others discover the project and motivates future development.
+
+---
+
+## 🚀 SentinelShield
+### Secure Networks • Detect Threats • Protect Systems
